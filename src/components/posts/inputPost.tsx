@@ -24,18 +24,18 @@ export default function InputPost() {
       className="flex flex-col items-center"
       onSubmit={(e) => _handleSubmit(e)}
     >
-      <label htmlFor="posts" className="text-2xl">
+      <label htmlFor="posts" className="text-2xl text-white">
         Deixe sua mensagem:
       </label>
       <span>
-        <label htmlFor="titlepost">Título:</label>
+        <label htmlFor="titlepost text-white">Título:</label>
         <input type="text" name="titlepost" className="h-8 rounded-md mb-2"></input>
       </span>
       <span>
-        <label htmlFor="posts">Post:</label>
+        <label htmlFor="posts text-white">Post:</label>
         <input type="text" name="posts" className="h-8 rounded-md"></input>
       </span>
-      <button className=" bg-purple-900 max-w-fit p-2 mt-2 rounded-md">
+      <button className=" bg-purple-900 max-w-fit p-2 mt-2 rounded-md text-white">
         Enviar
       </button>
     </form>
