@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="flex flex-row flex-wrap justify-center gap-10">
       <InputPost call={getPosts}></InputPost>
-      <div className="flex w-full m-24 border-solid border-black border-2">
+      <div className="flex w-full m-24 border-solid">
         <Posts posts={posts}></Posts>
       </div>
     </main>
