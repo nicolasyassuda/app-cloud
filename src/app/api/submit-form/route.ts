@@ -20,3 +20,15 @@ export async function POST(req: NextRequest) {
 
     });
 }
+
+export async function GET() {
+  const params = {
+    TableName: 'MinhaTabelaDynamoDB2'
+  };
+  return await (db.scan(params).promise()).catch((err: any) => {
+    console.error(err);
+    return NextResponse.json([]);
+  }).then((data:any) => {
+    return NextResponse.json(data.Items);
+  });
+}

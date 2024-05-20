@@ -3,7 +3,7 @@ import { randomBytes } from "crypto";
 
 import { FormEvent } from "react";
 
-export default function InputPost() {
+export default function InputPost({call}: {call: () => void}) {
   async function _handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     let formData = {
@@ -18,6 +18,7 @@ export default function InputPost() {
         },
         body: JSON.stringify(formData),
       });
+    call();
   }
   return (
     <form
