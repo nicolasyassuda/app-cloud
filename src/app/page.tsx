@@ -3,7 +3,7 @@ import Posts from "@/components/posts/posts";
 import { PostsService } from "../services/posts/index";
 import InputPost from "@/components/posts/inputPost";
 
-export default async function Home({ session }: { session?: any }) {
+export default async function Home() {
   let posts = (await PostsService.getPosts()) ?? [];
   async function handleSubmit(formData:any) {
     await PostsService.postPosts(formData);

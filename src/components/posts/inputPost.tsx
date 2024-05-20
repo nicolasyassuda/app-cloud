@@ -8,7 +8,7 @@ export default function InputPost() {
     e.preventDefault();
     let formData = {
       UserID: randomBytes(16).toString("hex"),
-      Title: e.currentTarget.title.value,
+      Title: e.currentTarget.titlepost.value,
       Text: e.currentTarget.posts.value
     };
     const response = await fetch('./api/submit-form', {
@@ -28,8 +28,8 @@ export default function InputPost() {
         Deixe sua mensagem:
       </label>
       <span>
-        <label htmlFor="title">Título:</label>
-        <input type="text" name="title" className="h-8 rounded-md mb-2"></input>
+        <label htmlFor="titlepost">Título:</label>
+        <input type="text" name="titlepost" className="h-8 rounded-md mb-2"></input>
       </span>
       <span>
         <label htmlFor="posts">Post:</label>
