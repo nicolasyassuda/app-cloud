@@ -1,6 +1,5 @@
 "use client";
 import Posts from "@/components/posts/posts";
-import { PostsService } from "../services/posts/index";
 import InputPost from "@/components/posts/inputPost";
 import { useEffect, useState } from "react";
 
