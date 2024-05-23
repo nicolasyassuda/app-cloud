@@ -4,6 +4,6 @@ AWS.config.update({
   secretAccessKey: process.env.DB_SECRET_ACCESS_KEY,
   region: 'us-east-2',
 });
-const db = new AWS.DynamoDB.DocumentClient({ apiVersion: 'latest' });
+const db = new AWS.DynamoDB();
 
 export default db;
